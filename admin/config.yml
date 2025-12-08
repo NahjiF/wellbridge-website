@@ -6,14 +6,20 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "homepage"
-    label: "Homepage Content"
+  # Gallery that your mom can edit
+  - name: "gallery"
+    label: "Gallery / Previous Events"
     files:
-      - file: "content/homepage.yml"
-        label: "Homepage"
-        name: "home"
+      - file: "content/gallery/index.json"
+        label: "Gallery Items"
+        name: "gallery_items"
+        format: json
         fields:
-          - { name: "headline", label: "Main Headline", widget: "string" }
-          - { name: "subheadline", label: "Sub Headline", widget: "text" }
-          - { name: "hero_text", label: "Hero Paragraph", widget: "text" }
-          - { name: "phone", label: "Phone Number", widget: "string" }
+          - label: "Items"
+            name: "items"
+            widget: list
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
