@@ -36,7 +36,7 @@
       <div class="hero-overlay">
         <div class="container hero-content">
           <p class="eyebrow">Birmingham, AL • Forestdale</p>
-          <h1>Beautiful, flexible space for your next event.</h1>
+          <h1>Beautiful, flexible<br />space for your next<br />event.</h1>
           <p class="hero-subtitle">
             Host showers, birthday parties, meetings, repasts, and more at WellBridge Social.
             Two rooms, simple pricing, and a welcoming atmosphere.
@@ -52,7 +52,7 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT / WELCOME -->
     <section id="about" class="section reveal">
       <div class="container two-column">
         <div>
@@ -289,7 +289,7 @@
         </div>
 
         <div class="contact-grid">
-          <!-- Netlify form -->
+          <!-- Netlify form: sends to backend, no email app -->
           <form
             id="contactForm"
             class="contact-form"
@@ -314,7 +314,12 @@
             <input id="phone" name="phone" type="tel" required />
 
             <label for="eventType">Event Type</label>
-            <input id="eventType" name="eventType" type="text" placeholder="Birthday, shower, meeting, repast, etc." />
+            <input
+              id="eventType"
+              name="eventType"
+              type="text"
+              placeholder="Birthday, shower, meeting, repast, etc."
+            />
 
             <label for="details">Event Details</label>
             <textarea
