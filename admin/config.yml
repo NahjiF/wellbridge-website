@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Homepage Content"
+    files:
+      - file: "content/homepage.yml"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - { name: "headline", label: "Main Headline", widget: "string" }
+          - { name: "subheadline", label: "Sub Headline", widget: "text" }
+          - { name: "hero_text", label: "Hero Paragraph", widget: "text" }
+          - { name: "phone", label: "Phone Number", widget: "string" }
