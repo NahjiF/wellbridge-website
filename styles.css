@@ -453,3 +453,123 @@ p {
   font-size: 0.85rem;
   color: #c2b59b;
 }
+
+/* ============================
+   Scroll Animation Helpers
+   ============================ */
+
+.animate,
+.animate-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate.visible,
+.animate-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* If you want pure fade (no movement) for .animate: */
+.animate {
+  transform: none;
+}
+
+/* FAQ open state */
+.faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 400px; /* enough for the text */
+}
+
+.faq-item .faq-toggle {
+  transition: transform 0.2s ease;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg); /* '+' turns into an 'x' style */
+}
+
+/* =====================================
+   MOBILE LAYOUT FIXES
+   ===================================== */
+@media (max-width: 768px) {
+  /* Header / nav */
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  /* Hero area */
+  .hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .hero-inner {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .hero-location {
+    letter-spacing: 0.08em;
+    font-size: 0.65rem;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .hero-tagline {
+    max-width: 30rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .hero-phone {
+    font-size: 0.85rem;
+  }
+
+  /* General section padding */
+  .section,
+  .section-two-column {
+    padding-inline: 1.5rem;
+  }
+
+  .section-two-column .section-inner,
+  .section-two-column {
+    flex-direction: column;
+  }
+
+  .section-two-column .column,
+  .highlight-card {
+    width: 100%;
+  }
+}
