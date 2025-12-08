@@ -1,236 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WellBridge Social | Event & Conference Venue</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>WellBridge Social CMS</title>
 
-<body>
-  <!-- HEADER / NAV -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="logo">
-        <!-- change src to your actual logo file name -->
-        <img src="images/logo-wellbridge.png" alt="WellBridge Social logo" />
-      </a>
+    <!-- Netlify Identity Widget (REQUIRED for login/signup) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
 
-      <nav class="main-nav">
-        <a href="#hero">Home</a>
-        <a href="#previous-events">Previous Events</a>
-        <a href="#rentals">Rentals</a>
-        <a href="#how-it-started">How It Started</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
-    </div>
-  </header>
+  <body>
+    <!-- Netlify CMS App -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
-  <!-- HERO -->
-  <main>
-    <section id="hero" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow">BIRMINGHAM, AL • FORESTDALE</p>
-          <h1>Beautiful, flexible space for your next event.</h1>
-          <p class="hero-subtitle">
-            Host showers, birthday parties, meetings, repasts, and more at WellBridge Social.
-            Two rooms, simple pricing, and a welcoming atmosphere.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#rentals" class="btn btn-primary">View Rental Options</a>
-            <a href="#contact" class="btn btn-outline">Check Date Availability</a>
-          </div>
-
-          <p class="hero-note">
-            Call or text <strong>205-504-6812</strong> to get started.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>Welcome to WellBridge Social</h2>
-        <p>
-          WellBridge Social is a locally owned event and conference venue in Birmingham, AL,
-          operated by <strong>Lynn Wilkerson</strong>. Our goal is to make hosting your event simple,
-          affordable, and stress-free.
-        </p>
-        <p>
-          With two flexible spaces, included tables and chairs, and optional linen rentals,
-          you can shape the room to match your colors, theme, and style.
-        </p>
-      </div>
-    </section>
-
-    <!-- PREVIOUS EVENTS / GALLERY (CMS-EDITABLE PART) -->
-    <section id="previous-events" class="section section-alt">
-      <div class="container">
-        <h2>Previous Events</h2>
-        <p class="section-intro">
-          Photo gallery of events hosted at WellBridge Social.
-        </p>
-
-        <!-- JS will inject CMS items here -->
-        <div id="gallery-grid" class="gallery-grid">
-          <p class="gallery-empty-message">
-            Gallery coming soon as we add photos from upcoming events.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- RENTALS -->
-    <section id="rentals" class="section">
-      <div class="container">
-        <h2>Rental Information</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Large Room</h3>
-            <p>Ideal for up to <strong>100 guests</strong>.</p>
-            <ul>
-              <li>Day events (9am–5pm): <strong>$700</strong></li>
-              <li>Evening events (4pm–12am / 5pm–1am / 6pm–2am): <strong>$900</strong></li>
-              <li>Includes tables &amp; chairs</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Small Room</h3>
-            <p>Ideal for up to <strong>50 guests</strong>.</p>
-            <ul>
-              <li>Day events (9am–5pm): <strong>$600</strong></li>
-              <li>Evening events (4pm–12am / 5pm–1am / 6pm–2am): <strong>$700</strong></li>
-              <li>Includes tables &amp; chairs</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Linen &amp; Extras</h3>
-            <ul>
-              <li>Polyester tablecloths: <strong>$8</strong> each</li>
-              <li>Chair covers &amp; sashes: <strong>$1</strong> each</li>
-              <li>Overlays: <strong>$4</strong> each</li>
-              <li>Specialty cloths (sequin/rosette): <strong>$15</strong> each</li>
-            </ul>
-            <p>We set up and break down all rented linen for you.</p>
-          </article>
-        </div>
-
-        <p class="small-note">
-          All rental prices are for up to <strong>8 hours</strong>. Additional time is
-          <strong>$100 per hour</strong>. Cleanup deposit: <strong>$100</strong> (refunded when the
-          room is left clean and trash removed).
-        </p>
-      </div>
-    </section>
-
-    <!-- HOW IT STARTED -->
-    <section id="how-it-started" class="section section-alt">
-      <div class="container">
-        <h2>How It Started</h2>
-        <p>
-          WellBridge Social was created to give families in the Birmingham / Forestdale area
-          a beautiful, flexible space for life’s celebrations — without the stress and hidden fees
-          of larger venues.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container contact-layout">
-        <div class="contact-form">
-          <h2>Contact Us</h2>
-          <p>Ready to check a date or ask a question? Reach out below.</p>
-
-          <!-- Netlify form -->
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            action="/thank_you.html"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-
-            <label>
-              Phone
-              <input type="tel" name="phone" />
-            </label>
-
-            <label>
-              Event Type
-              <input type="text" name="event_type" placeholder="Birthday, shower, meeting, repast, etc." />
-            </label>
-
-            <label>
-              Event Details
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Date, time frame, guest count, room size (large/small), and any questions."
-              ></textarea>
-            </label>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-
-        <div class="contact-info">
-          <h3>Venue Information</h3>
-          <p><strong>WellBridge Social</strong></p>
-          <p>1633 Forestdale Blvd<br />Birmingham, AL</p>
-
-          <p>
-            <strong>Phone:</strong>
-            <br />
-            205-504-6812
-          </p>
-
-          <p>
-            Please include your date and estimated guest count for a quicker response.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> WellBridge Social. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- NETLIFY IDENTITY + SITE JS -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="script.js"></script>
-
-  <script>
-    // Identity: if user logs in, send them to the CMS
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", (user) => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-</body>
+    <script>
+      // After logging into Identity, send user to /admin/
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
