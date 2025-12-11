@@ -1,5 +1,12 @@
 {
-  "type": "about",
   "title": "Welcome to WellBridge Social",
-  "body": "WellBridge Social is a locally owned event and conference venue in Birmingham, AL, operated by Lynn Wilkerson. Our goal is to make hosting your event simple, affordable, and stress-free.\n\nWith two flexible spaces, included tables and chairs, and optional linen rentals, you can style the room to match your colors and theme. Bring your own planner, caterer, DJ, and décor—or keep it simple and intimate."
+  "paragraph1": "WellBridge Social is a locally owned event and conference venue in Birmingham, AL, operated by Lynn Wilkerson.",
+  "paragraph2": "With two flexible spaces, included tables and chairs, and optional linen rentals...",
+  "details": [
+    "Located at 1633 Forestdale Blvd, Birmingham, AL",
+    "Large room — up to 100 guests",
+    "Small room — up to 50 guests",
+    "Tables & Chairs included",
+    "Optional linen available"
+  ]
 }

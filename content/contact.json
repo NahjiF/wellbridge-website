@@ -1,8 +1,7 @@
 {
-  "type": "contact",
-  "venue_name": "WellBridge Social",
-  "address": "1633 Forestdale Blvd, Birmingham, AL",
-  "phone": "205-504-6812",
-  "email": "wellbridgesocial@gmail.com",
-  "map_link": "https://www.google.com/maps"
+  "title": "Contact Us",
+  "subtitle": "Ready to check a date or ask a question?",
+  "venue_title": "Venue Information",
+  "venue_text": "WellBridge Social\n1633 Forestdale Blvd\nBirmingham, AL",
+  "note": "Please include your date and estimated guest count."
 }

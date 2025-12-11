@@ -6,87 +6,146 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+
+  # -------------------------
+  # HOMEPAGE (Hero Section)
+  # -------------------------
   - name: "homepage"
     label: "Homepage Content"
     files:
-      - file: "content/homepage.json"
-        label: "Homepage"
+      - label: "Homepage"
         name: "homepage"
+        file: "content/homepage.json"
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
-          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
-          - { label: "Hero Button 1 Text", name: "button1_text", widget: "string" }
-          - { label: "Hero Button 1 Link", name: "button1_link", widget: "string" }
-          - { label: "Hero Button 2 Text", name: "button2_text", widget: "string" }
-          - { label: "Hero Button 2 Link", name: "button2_link", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Button 1 Text", name: "hero_button1_text", widget: "string" }
+          - { label: "Button 1 Link", name: "hero_button1_link", widget: "string" }
+          - { label: "Button 2 Text", name: "hero_button2_text", widget: "string" }
+          - { label: "Button 2 Link", name: "hero_button2_link", widget: "string" }
 
+  # -------------------------
+  # ABOUT
+  # -------------------------
   - name: "about"
     label: "About Section"
     files:
-      - file: "content/about.json"
-        label: "About Page"
+      - label: "About Content"
         name: "about"
+        file: "content/about.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "text" }
+          - { label: "Paragraph 1", name: "p1", widget: "text" }
+          - { label: "Paragraph 2", name: "p2", widget: "text" }
 
+  # -------------------------
+  # CONTACT INFO
+  # -------------------------
   - name: "contact"
     label: "Contact Info"
     files:
-      - file: "content/contact.json"
-        label: "Contact Page"
+      - label: "Contact Content"
         name: "contact"
+        file: "content/contact.json"
         fields:
-          - { label: "Phone Number", name: "phone", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Extra Notes", name: "notes", widget: "text", required: false }
 
-  - name: "rentals"
+  # -------------------------
+  # RENTAL INFO
+  # -------------------------
+  - name: "rental_info"
     label: "Rental Pricing"
     files:
-      - file: "content/rentals.json"
-        label: "Rental Info"
-        name: "rentals"
+      - label: "Rental Information"
+        name: "rental_info"
+        file: "content/rental_info.json"
         fields:
-          - { label: "Large Room Price (Day)", name: "large_day", widget: "string" }
-          - { label: "Large Room Price (Evening)", name: "large_evening", widget: "string" }
-          - { label: "Small Room Price (Day)", name: "small_day", widget: "string" }
-          - { label: "Small Room Price (Evening)", name: "small_evening", widget: "string" }
+          - { label: "Large Room Day Price", name: "large_day", widget: "string" }
+          - { label: "Large Room Night Price", name: "large_night", widget: "string" }
+          - { label: "Small Room Day Price", name: "small_day", widget: "string" }
+          - { label: "Small Room Night Price", name: "small_night", widget: "string" }
+          - { label: "Notes", name: "notes", widget: "text", required: false }
 
+  # -------------------------
+  # FAQ SECTION
+  # -------------------------
   - name: "faq"
     label: "FAQ Section"
     files:
-      - file: "content/faq.json"
-        label: "FAQs"
+      - label: "FAQs"
         name: "faq"
+        file: "content/faq.json"
         fields:
-          - label: "FAQs"
-            name: "faqs"
+          - label: "FAQ Items"
+            name: "items"
             widget: "list"
             fields:
               - { label: "Question", name: "question", widget: "string" }
               - { label: "Answer", name: "answer", widget: "text" }
 
-  - name: "site"
-    label: "Site Settings"
+  # -------------------------
+  # HOW IT STARTED
+  # -------------------------
+  - name: "how_started"
+    label: "How It Started"
     files:
-      - file: "content/site.json"
-        label: "General Settings"
-        name: "site"
+      - label: "Story Content"
+        name: "how_started"
+        file: "content/how_started.json"
         fields:
-          - { label: "Site Title", name: "site_title", widget: "string" }
-          - { label: "Footer Text", name: "footer_text", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Paragraph 1", name: "p1", widget: "text" }
+          - { label: "Paragraph 2", name: "p2", widget: "text" }
 
-  - name: "venue"
-    label: "Venue Details"
+  # -------------------------
+  # PLAN YOUR EVENT
+  # -------------------------
+  - name: "plan_event"
+    label: "Plan Your Event"
     files:
-      - file: "content/venue.json"
-        label: "Venue Info"
-        name: "venue"
+      - label: "Event Steps"
+        name: "plan_event"
+        file: "content/plan_event.json"
         fields:
-          - { label: "Address", name: "address", widget: "string" }
-          - label: "Venue Features"
-            name: "features"
+          - label: "Steps"
+            name: "steps"
             widget: "list"
             fields:
-              - { label: "Item", name: "item", widget: "string" }
+              - { label: "Step Number", name: "number", widget: "number" }
+              - { label: "Step Title", name: "title", widget: "string" }
+              - { label: "Step Description", name: "description", widget: "text" }
+
+  # -------------------------
+  # PREVIOUS EVENTS
+  # -------------------------
+  - name: "previous_events"
+    label: "Previous Events"
+    files:
+      - label: "Events Gallery"
+        name: "previous_events"
+        file: "content/previous_events.json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            field: { label: "Image", name: "image", widget: "image" }
+
+  # -------------------------
+  # SITE SETTINGS (Header/Footer)
+  # -------------------------
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - label: "Header"
+        name: "header"
+        file: "content/header.json"
+        fields:
+          - { label: "Navigation Items", name: "nav", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+
+      - label: "Footer"
+        name: "footer"
+        file: "content/footer.json"
+        fields:
+          - { label: "Footer Text", name: "text", widget: "string" }

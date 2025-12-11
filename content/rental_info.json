@@ -1,0 +1,55 @@
+{
+  "title": "2026 Rental Information",
+  "subtitle": "Clear pricing for both the large and small rooms.",
+  "description": "Pricing is based on room size, event type, day of the week...",
+  "note": "All rentals are for up to 8 hours. Additional time is $100/hr.",
+
+  "large_room": {
+    "title": "Large Room",
+    "capacity": "Up to 100 guests",
+    "pricing": [
+      { "label": "Day events (9 AM – 5 PM)", "price": "$700" },
+      { "label": "Evening events (8 hours)", "price": "$900", "extra": "4 PM–12 AM • 5 PM–1 AM • 6 PM–2 AM" }
+    ]
+  },
+
+  "small_room": {
+    "title": "Small Room",
+    "capacity": "Up to 50 guests",
+    "pricing": [
+      { "label": "Day events (9 AM – 5 PM)", "price": "$600" },
+      { "label": "Evening events (8 hours)", "price": "$700", "extra": "4 PM–12 AM • 5 PM–1 AM • 6 PM–2 AM" }
+    ]
+  },
+
+  "cleanup": {
+    "title": "Clean Up Deposit",
+    "paragraph1": "A refundable $100 deposit is required before your event.",
+    "rules": [
+      "Floors and tables must be free of debris",
+      "Trash must be bagged",
+      "Decorations removed",
+      "Must finish within rental time"
+    ],
+    "paragraph2": "If these are not followed, the deposit will be forfeited."
+  },
+
+  "linen": {
+    "title": "Tables, Chairs & Linen",
+    "included": ["60\" round tables", "6 ft tables", "Folding chairs"],
+    "prices": [
+      "Polyester tablecloths – $8 each",
+      "Chair covers & sashes – $1 each",
+      "Overlays – $4 each",
+      "Runners – $3 each",
+      "Specialty cloths – $15 each"
+    ],
+    "paragraph2": "We set up and take down all rented linen for you."
+  },
+
+  "alcohol": {
+    "title": "Alcohol & Security",
+    "paragraph1": "If more than 50 guests and alcohol is served...",
+    "paragraph2": "You must arrange a police officer with Adamsville: 205-674-5671."
+  }
+}

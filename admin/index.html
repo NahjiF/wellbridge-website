@@ -4,19 +4,51 @@
     <meta charset="utf-8" />
     <title>WellBridge Social CMS</title>
 
-    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Custom Admin Styling -->
-    <link rel="stylesheet" href="./admin.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: white;
+      }
+      header {
+        padding: 20px;
+        background: #000;
+        border-bottom: 1px solid #333;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 26px;
+        color: #f5d7a1;
+      }
+      #cms-container {
+        padding: 40px;
+        text-align: center;
+      }
+      .loading-text {
+        margin-top: 20px;
+        opacity: 0.7;
+        font-size: 14px;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Netlify CMS App -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <header>
+      <h1>WellBridge Social Admin Area</h1>
+    </header>
+
+    <div id="cms-container">
+      <div id="cms"></div>
+      <p class="loading-text">Loading CMS...</p>
+    </div>
+
+    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
 
     <script>
-      // After logging into Identity, send user to /admin/
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
           if (!user) {

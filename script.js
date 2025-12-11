@@ -1,12 +1,14 @@
-// script.js
-
-// 1) Set current year in the footer
+/* --------------------------------------------------
+   1) Set current year in footer
+-------------------------------------------------- */
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// 2) Smooth scroll for nav links (Home, Rentals, Contact Us, etc.)
+/* --------------------------------------------------
+   2) Smooth scrolling for navigation links
+-------------------------------------------------- */
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     const targetId = link.getAttribute("href").slice(1);
@@ -19,7 +21,9 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-// 3) Reveal-on-scroll animations for sections
+/* --------------------------------------------------
+   3) Reveal section animations
+-------------------------------------------------- */
 const revealEls = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
@@ -37,12 +41,14 @@ if ("IntersectionObserver" in window) {
 
   revealEls.forEach((el) => observer.observe(el));
 } else {
-  // Fallback for older browsers
   revealEls.forEach((el) => el.classList.add("in-view"));
 }
 
-// 4) Nice UX on form submit – disable button & show "Sending..."
+/* --------------------------------------------------
+   4) Disable submit button after sending the form
+-------------------------------------------------- */
 const contactForm = document.getElementById("contactForm");
+
 if (contactForm) {
   contactForm.addEventListener("submit", () => {
     const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -50,6 +56,5 @@ if (contactForm) {
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending...";
     }
-    // Netlify will handle the actual submit + redirect to thank_you.html
   });
 }
