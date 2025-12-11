@@ -1,73 +1,98 @@
-/* ----------------------------------------------------
-   MOBILE NAV MENU
----------------------------------------------------- */
-const navToggle = document.querySelector(".nav-toggle");
-const mainNav = document.querySelector(".main-nav");
+// script.js
 
-navToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", () => {
+  setYearInFooter();
+  setupSmoothScroll();
+  loadGalleryFromJSON();
 });
 
-/* Close nav when clicking a link (mobile only) */
-document.querySelectorAll(".main-nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        if (window.innerWidth < 900) {
-            mainNav.classList.remove("active");
-        }
+/**
+ * Put current year in footer.
+ */
+function setYearInFooter() {
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+}
+
+/**
+ * Smooth scroll for internal links.
+ */
+function setupSmoothScroll() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const targetId = link.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
     });
-});
+  });
+}
 
+/**
+ * Load gallery items from content/gallery/index.json
+ * This file is edited by Netlify/Decap CMS.
+ */
+async function loadGalleryFromJSON() {
+  const container = document.getElementById("gallery-grid");
+  if (!container) return;
 
-/* ----------------------------------------------------
-   FAQ ACCORDION
----------------------------------------------------- */
-const questions = document.querySelectorAll(".faq-question");
+  const placeholder = container.querySelector(".gallery-empty-message");
 
-questions.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const answer = btn.nextElementSibling;
+  try {
+    const response = await fetch("content/gallery/index.json", { cache: "no-store" });
 
-        // Close others
-        document.querySelectorAll(".faq-answer").forEach(a => {
-            if (a !== answer) a.style.display = "none";
-        });
-
-        // Toggle current answer
-        answer.style.display = answer.style.display === "block" ? "none" : "block";
-    });
-});
-
-
-/* ----------------------------------------------------
-   SMOOTH SCROLLING FOR INTERNAL LINKS
----------------------------------------------------- */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        const targetID = this.getAttribute("href");
-        if (targetID && targetID !== "#") {
-            e.preventDefault();
-            const target = document.querySelector(targetID);
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: "smooth"
-                });
-            }
-        }
-    });
-});
-
-
-/* ----------------------------------------------------
-   HERO FADE-IN ANIMATION (optional but nice)
----------------------------------------------------- */
-window.addEventListener("load", () => {
-    const hero = document.querySelector(".hero-section");
-    if (hero) {
-        hero.style.opacity = 0;
-        hero.style.transition = "opacity 1.5s ease";
-        setTimeout(() => {
-            hero.style.opacity = 1;
-        }, 200);
+    if (!response.ok) {
+      console.warn("Gallery JSON not found yet, keeping placeholder.");
+      return;
     }
-});
+
+    const data = await response.json();
+    const items = Array.isArray(data.items) ? data.items : [];
+
+    if (!items.length) {
+      console.warn("Gallery JSON has no items yet.");
+      return;
+    }
+
+    // Clear placeholder + any old content
+    container.innerHTML = "";
+
+    items.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "gallery-item";
+
+      const img = document.createElement("img");
+      img.src = item.image;
+      img.alt = item.alt || item.title || "Event photo";
+
+      const body = document.createElement("div");
+      body.className = "gallery-item-body";
+
+      const title = document.createElement("h3");
+      title.textContent = item.title || "Event";
+
+      body.appendChild(title);
+
+      if (item.description) {
+        const desc = document.createElement("p");
+        desc.textContent = item.description;
+        body.appendChild(desc);
+      }
+
+      card.appendChild(img);
+      card.appendChild(body);
+      container.appendChild(card);
+    });
+  } catch (err) {
+    console.error("Error loading gallery:", err);
+    // If there’s an error, we just leave the "coming soon" text.
+    if (placeholder) placeholder.style.display = "block";
+  }
+}

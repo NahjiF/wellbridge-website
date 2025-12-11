@@ -1,134 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WellBridge Social • Event Venue</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WellBridge Social | Event & Conference Venue</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-    <nav>
-        <img src="logo.png" class="logo" alt="WellBridge Social Logo">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="WellBridge Social logo" class="logo" />
+      </div>
+
+      <nav class="main-nav">
         <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#events">PREVIOUS EVENTS</a></li>
-            <li><a href="#rentals">RENTALS</a></li>
-            <li><a href="#plan">PLAN YOUR EVENT</a></li>
-            <li><a href="#faq">FAQ'S</a></li>
-            <li><a href="#story">HOW IT STARTED</a></li>
-            <li><a href="#contact">CONTACT US</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#previous-events">Previous Events</a></li>
+          <li><a href="#rental-info">Rentals</a></li>
+          <li><a href="#plan-event">Plan Your Event</a></li>
+          <li><a href="#faq">FAQ's</a></li>
+          <li><a href="#how-started">How It Started</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero" id="home">
-        <h1>Beautiful, flexible space for your next event.</h1>
-        <p>Host showers, birthday parties, meetings, repasts, and more at WellBridge Social. Two rooms, simple pricing, and a welcoming atmosphere.</p>
-        <div class="hero-buttons">
-            <a class="btn" href="#rentals">View Rental Options</a>
-            <a class="btn-outline" href="#contact">Check Date Availability</a>
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero reveal">
+      <div class="hero-overlay">
+        <div class="container hero-content">
+          <p class="eyebrow">Birmingham, AL • Forestdale</p>
+          <h1>Beautiful, flexible<br />space for your next<br />event.</h1>
+          <p class="hero-subtitle">
+            Host showers, birthday parties, meetings, repasts, and more at WellBridge Social.
+            Two rooms, simple pricing, and a welcoming atmosphere.
+          </p>
+          <div class="hero-actions">
+            <a href="#rental-info" class="btn btn-primary">View Rental Options</a>
+            <a href="#contact" class="btn btn-outline">Check Date Availability</a>
+          </div>
+          <p class="hero-contact">
+            Call or text <strong>205-504-6812</strong> to get started.
+          </p>
         </div>
+      </div>
     </section>
 
-    <section class="container" id="about">
-        <h2>Welcome to WellBridge Social</h2>
-        <p>WellBridge Social is a locally owned event and conference venue in Birmingham, AL. Our mission is to make hosting your event simple and stress-free.</p>
+    <!-- ABOUT / WELCOME -->
+    <section id="about" class="section reveal">
+      <div class="container two-column">
+        <div>
+          <h2>Welcome to WellBridge Social</h2>
+          <p>
+            WellBridge Social is a locally owned event and conference venue in Birmingham, AL,
+            operated by <strong>Lynn Wilkerson</strong>. Our goal is to make hosting your event
+            simple, affordable, and stress-free.
+          </p>
+          <p>
+            With two flexible spaces, included tables and chairs, and optional linen rentals,
+            you can style the room to match your colors and theme. Bring your own planner,
+            caterer, DJ, and décor—or keep it simple and intimate.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Venue Details</h3>
+          <ul>
+            <li>Located at <strong>1633 Forestdale Blvd, Birmingham, AL</strong></li>
+            <li>Large room for up to <strong>100 guests</strong></li>
+            <li>Small room for up to <strong>50 guests</strong></li>
+            <li>Tables &amp; chairs included with all rentals</li>
+            <li>Optional linen and specialty cloths available</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <div class="card-box">
+    <!-- PREVIOUS EVENTS -->
+    <section id="previous-events" class="section section-alt reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Previous Events</h2>
+          <p>Gallery coming soon as we add photos from upcoming events.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RENTAL INFO -->
+    <section id="rental-info" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>2026 Rental Information</h2>
+          <p>Clear pricing for both the large and small rooms.</p>
+        </div>
+
+        <p class="center-text">
+          Pricing is based on room size, event type, day of the week, time needed,
+          number of guests, linen rental, and whether alcohol will be served.
+        </p>
+
+        <div class="info-note">
+          <strong>All rentals are for up to 8 hours.</strong> Additional time is
+          <strong>$100 per hour</strong>. Events must end on time; setup and cleanup
+          are included in your 8-hour window.
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Large Room</h3>
+            <p class="capacity">Up to 100 guests</p>
             <ul>
-                <li>Located at 1633 Forestdale Blvd, Birmingham, AL</li>
-                <li>Large room up to 100 guests</li>
-                <li>Small room up to 50 guests</li>
-                <li>Tables & chairs included</li>
-                <li>Optional linen rentals available</li>
+              <li>
+                <span>Day events (9 AM – 5 PM)</span>
+                <strong>$700</strong>
+              </li>
+              <li>
+                <span>Evening events (8 hours)</span>
+                <strong>$900</strong>
+                <small>4 PM–12 AM • 5 PM–1 AM • 6 PM–2 AM</small>
+              </li>
             </ul>
+          </div>
+
+          <div class="pricing-card">
+            <h3>Small Room</h3>
+            <p class="capacity">Up to 50 guests</p>
+            <ul>
+              <li>
+                <span>Day events (9 AM – 5 PM)</span>
+                <strong>$600</strong>
+              </li>
+              <li>
+                <span>Evening events (8 hours)</span>
+                <strong>$700</strong>
+                <small>4 PM–12 AM • 5 PM–1 AM • 6 PM–2 AM</small>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div class="two-column details-grid">
+          <div>
+            <h3>Clean Up Deposit</h3>
+            <p>
+              A refundable <strong>$100 clean up deposit</strong> is required before your event.
+              It will be returned if:
+            </p>
+            <ul>
+              <li>Floors and tables are free of debris</li>
+              <li>Trash is bagged and placed in provided cans</li>
+              <li>Decorations are removed and broken down</li>
+              <li>Breakdown is completed within your rental time</li>
+            </ul>
+            <p>If not, the deposit will be forfeited.</p>
+          </div>
+
+          <div>
+            <h3>Tables, Chairs &amp; Linen</h3>
+            <p><strong>Included with all rentals:</strong></p>
+            <ul>
+              <li>60" round tables</li>
+              <li>6 ft tables</li>
+              <li>Folding chairs</li>
+            </ul>
+            <p><strong>Linen rentals:</strong></p>
+            <ul>
+              <li>Polyester tablecloths – $8 each</li>
+              <li>Chair covers &amp; sashes – $1 each</li>
+              <li>Overlays – $4 each</li>
+              <li>Runners – $3 each</li>
+              <li>Specialty cloths – $15 each</li>
+            </ul>
+            <p>We set up and take down all rented linen for you.</p>
+          </div>
+        </div>
+
+        <div class="info-note">
+          <h3>Alcohol &amp; Security</h3>
+          <p>
+            If you have more than 50 guests and serve alcohol (BYOB or open bar),
+            the City of Adamsville requires a police officer on site.
+          </p>
+          <p>
+            To arrange and pay for an officer, please contact the City of Adamsville at
+            <strong>205-674-5671</strong>.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section class="container" id="rentals">
-        <h2>2026 Rental Information</h2>
-
-        <div class="card-grid">
-            <div class="card">
-                <h3>Large Room</h3>
-                <p>Day Events: $700</p>
-                <p>Evening Events: $900</p>
-            </div>
-
-            <div class="card">
-                <h3>Small Room</h3>
-                <p>Day Events: $600</p>
-                <p>Evening Events: $700</p>
-            </div>
+    <!-- PLAN YOUR EVENT -->
+    <section id="plan-event" class="section section-alt reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Plan Your Event</h2>
+          <p>We keep the process simple so you can focus on celebrating.</p>
         </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <h3>Check Your Date</h3>
+            <p>Send your preferred date, time frame, and guest count.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <h3>Reserve Your Room</h3>
+            <p>Secure your date with a 50% deposit and a signed agreement.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <h3>Bring Your Vision</h3>
+            <p>Decorate and host your event the way you imagined it.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="container" id="plan">
-        <h2>Plan Your Event</h2>
-
-        <div class="steps">
-            <div class="step">
-                <h3>1. Check Your Date</h3>
-                <p>Send your preferred date, time frame, and guest count.</p>
-            </div>
-
-            <div class="step">
-                <h3>2. Reserve Your Room</h3>
-                <p>Secure your date with a 50% deposit and signed agreement.</p>
-            </div>
-
-            <div class="step">
-                <h3>3. Bring Your Vision</h3>
-                <p>Decorate and host your event the way you imagined.</p>
-            </div>
+    <!-- FAQ -->
+    <section id="faq" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>FAQ's</h2>
+          <p>Answers to a few common questions about renting the venue.</p>
         </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Can I bring my own food and cake?</summary>
+            <p>Yes. Outside food, cake, and caterers are welcome.</p>
+          </details>
+          <details>
+            <summary>Can I bring a DJ and loud music?</summary>
+            <p>Yes, as long as building rules and quiet hours are respected.</p>
+          </details>
+          <details>
+            <summary>Do you offer tours?</summary>
+            <p>Yes. Contact us to schedule a walk-through of the space.</p>
+          </details>
+          <details>
+            <summary>Do you provide décor?</summary>
+            <p>
+              We provide tables, chairs, and linen rentals. All additional décor is
+              provided by you or your planner.
+            </p>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <section class="container" id="faq">
-        <h2>FAQ's</h2>
-
-        <div class="faq-item">
-            <p>Can I bring my own food and cake?</p>
-            <div class="faq-content">Yes! You can bring any food, desserts, or drinks.</div>
+    <!-- HOW IT STARTED -->
+    <section id="how-started" class="section section-alt reveal">
+      <div class="container two-column">
+        <div>
+          <h2>How It Started</h2>
+          <p>
+            WellBridge Social was created by <strong>Lynn Wilkerson</strong> as a warm,
+            flexible gathering space for families and organizations in Birmingham.
+          </p>
+          <p>
+            From baby showers to repasts, Lynn’s goal is for every guest to feel welcome
+            and every event to feel cared for.
+          </p>
         </div>
-
-        <div class="faq-item">
-            <p>Can I bring a DJ or loud music?</p>
-            <div class="faq-content">Yes, DJs and amplified music are allowed.</div>
+        <div class="card">
+          <h3>Our Commitment</h3>
+          <ul>
+            <li>Clear, honest pricing</li>
+            <li>Clean, ready-to-use space</li>
+            <li>Friendly and responsive communication</li>
+            <li>A venue that feels like “yours” for the day</li>
+          </ul>
         </div>
-
-        <div class="faq-item">
-            <p>Do you offer tours?</p>
-            <div class="faq-content">Yes, tours are available by appointment.</div>
-        </div>
+      </div>
     </section>
 
-    <section class="container" id="story">
-        <h2>How It Started</h2>
-        <p>WellBridge Social was created by Lynn Wilkerson as a warm, flexible gathering space for families and organizations in Birmingham.</p>
-    </section>
-
-    <section class="container" id="contact">
-        <h2>Contact Us</h2>
-
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <textarea placeholder="Event details..."></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <div class="venue-info">
-            <p><strong>WellBridge Social</strong><br>1633 Forestdale Blvd<br>Birmingham, AL<br>Phone: 205-504-6812</p>
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Ready to check a date or ask a question? Reach out below.</p>
         </div>
+
+        <div class="contact-grid">
+          <!-- Netlify form: sends to backend, no email app -->
+          <form
+            id="contactForm"
+            class="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thank_you.html"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required />
+
+            <label for="eventType">Event Type</label>
+            <input
+              id="eventType"
+              name="eventType"
+              type="text"
+              placeholder="Birthday, shower, meeting, repast, etc."
+            />
+
+            <label for="details">Event Details</label>
+            <textarea
+              id="details"
+              name="details"
+              rows="4"
+              placeholder="Preferred date, time frame, guest count, and room size."
+              required
+            ></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+
+          <div class="card">
+            <h3>Venue Information</h3>
+            <p>
+              <strong>WellBridge Social</strong><br />
+              1633 Forestdale Blvd<br />
+              Birmingham, AL
+            </p>
+            <p><strong>Phone:</strong> <a href="tel:12055046812">205-504-6812</a></p>
+            <p>
+              Please include your date and estimated guest count for a quicker response.
+            </p>
+            <p class="text-links">
+              Prefer to call or text directly?<br />
+              <a href="tel:12055046812">Call</a> •
+              <a href="sms:12055046812">Text</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>© 2025 WellBridge Social. All rights reserved.</footer>
+  </main>
 
-    <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> WellBridge Social. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
