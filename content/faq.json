@@ -1,10 +1,7 @@
 {
   "title": "FAQ's",
   "subtitle": "Answers to a few common questions about renting the venue.",
-  "items": [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+  "faqs": [
     {
       "question": "Can I bring my own food and cake?",
       "answer": "Yes, outside food is allowed."
@@ -15,32 +12,11 @@
     },
     {
       "question": "Do you offer tours?",
-      "answer": "Yes. Call or text to schedule a tour."
+      "answer": "Yes, call or text to schedule a tour."
     },
     {
       "question": "Do you provide décor?",
       "answer": "We provide tables, chairs, and optional linen rentals. Decorations are up to you."
     }
-  ],
-  "faqs": [
-    {
-      "question": "g",
-      "answer": "gg"
-    }
-=======
-    { "question": "Can I bring my own food and cake?", "answer": "Yes, outside food is welcome." },
-    { "question": "Can I bring a DJ and loud music?", "answer": "Yes, as long as quiet hours are respected." },
-    { "question": "Do you offer tours?", "answer": "Yes, contact us to schedule a walk-through." }
->>>>>>> Stashed changes
-=======
-    { "question": "Can I bring my own food and cake?", "answer": "Yes, outside food is welcome." },
-    { "question": "Can I bring a DJ and loud music?", "answer": "Yes, as long as quiet hours are respected." },
-    { "question": "Do you offer tours?", "answer": "Yes, contact us to schedule a walk-through." }
->>>>>>> Stashed changes
-=======
-    { "question": "Can I bring my own food and cake?", "answer": "Yes, outside food is welcome." },
-    { "question": "Can I bring a DJ and loud music?", "answer": "Yes, as long as quiet hours are respected." },
-    { "question": "Do you offer tours?", "answer": "Yes, contact us to schedule a walk-through." }
->>>>>>> Stashed changes
   ]
 }

@@ -1,30 +1,81 @@
-/* Make the CMS layout tighter and not centered huge */
-.nc-app-header {
-  padding: 10px 20px !important;
-}
+/* CLEAN, PROFESSIONAL CMS OVERRIDE */
 
-/* Reduce the giant white/gray area spacing */
-.nc-main {
-  margin-top: 10px !important;
-  padding-top: 0 !important;
-}
-
-/* Fix left sidebar width */
-.css-1p5q5e5 {
-  max-width: 240px !important;
-}
-
-/* Form fields styling */
-.css-1m7h6nq, 
-.css-14gy7wr, 
-.css-1qg7r45 {
-  padding: 8px 12px !important;
-  font-size: 15px !important;
-}
-
-/* Remove weird middle spacing bar */
-.nc-entryEditor-toolbar {
+/* Reset weird inherited borders from global styles */
+* {
   border: none !important;
-  margin-bottom: 5px !important;
-  padding-bottom: 0 !important;
+}
+
+/* Fix layout spacing */
+.cms-editor-view {
+  padding-top: 20px !important;
+}
+
+/* Input fields */
+input,
+textarea,
+select {
+  border: 1px solid #d0d0d0 !important;
+  border-radius: 6px !important;
+  padding: 10px !important;
+  font-size: 16px !important;
+  background: #ffffff !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Labels */
+label {
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+  display: block !important;
+  color: #333 !important;
+}
+
+/* Fix line appearing across screen */
+[class*="Pane"] {
+  border: none !important;
+}
+
+/* Remove divider bars */
+hr,
+[class*="divider"],
+[class*="line"] {
+  display: none !important;
+}
+
+/* Sidebar clean style */
+.nc-app-sidebar {
+  border-right: 1px solid #e3e3e3 !important;
+  background: #fafafa !important;
+}
+
+/* Field cards looking clean */
+.nc-controlPane-widget,
+.css-1a3g1go-ControlPaneContainer {
+  box-shadow: 0 0 0 1px #e4e4e4 !important;
+  border-radius: 6px !important;
+  padding: 20px !important;
+  background: #fff !important;
+}
+
+/* Titles and text */
+h1, h2, h3 {
+  color: #222 !important;
+  font-weight: 700 !important;
+}
+
+/* Buttons */
+button,
+.nc-button {
+  background: #333 !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  padding: 10px 18px !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+button:hover,
+.nc-button:hover {
+  background: #000 !important;
 }
