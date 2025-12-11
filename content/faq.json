@@ -4,6 +4,7 @@
   "items": [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     {
       "question": "Can I bring my own food and cake?",
       "answer": "Yes, outside food is allowed."
@@ -26,6 +27,11 @@
       "question": "g",
       "answer": "gg"
     }
+=======
+    { "question": "Can I bring my own food and cake?", "answer": "Yes, outside food is welcome." },
+    { "question": "Can I bring a DJ and loud music?", "answer": "Yes, as long as quiet hours are respected." },
+    { "question": "Do you offer tours?", "answer": "Yes, contact us to schedule a walk-through." }
+>>>>>>> Stashed changes
 =======
     { "question": "Can I bring my own food and cake?", "answer": "Yes, outside food is welcome." },
     { "question": "Can I bring a DJ and loud music?", "answer": "Yes, as long as quiet hours are respected." },
