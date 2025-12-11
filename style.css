@@ -1,428 +1,140 @@
-/* ----------------------------------------------------
-   RESET & BASE STYLES
----------------------------------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
 body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: #000;
-    color: #e8d6ac;
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* ----------------------------------------------------
-   HEADER
----------------------------------------------------- */
-.site-header {
-    width: 100%;
+    margin: 0;
     background: #000;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #e5c88b;
+}
+
+a {
+    color: #e5c88b;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #000;
+    border-bottom: 1px solid #222;
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 99;
 }
 
-.header-inner {
+nav .logo {
+    height: 70px;
+}
+
+nav ul {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 0;
-}
-
-.logo-image {
-    width: 130px;
-    height: auto;
-}
-
-/* Navigation */
-.main-nav .nav-list {
     list-style: none;
-    display: flex;
-    gap: 28px;
-}
-
-.main-nav a {
-    color: #e8d6ac;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: #c2a46a;
-}
-
-/* Mobile menu button */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-.nav-toggle span {
-    width: 24px;
-    height: 3px;
-    background: #e8d6ac;
-}
-
-
-/* ----------------------------------------------------
-   HERO SECTION
----------------------------------------------------- */
-.hero-section {
-    text-align: center;
-    padding: 140px 20px 120px;
-}
-
-.hero-location {
-    color: #d2b98b;
-    letter-spacing: 3px;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    line-height: 1.1;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-.hero-subtext {
-    max-width: 650px;
-    margin: 0 auto 40px;
-    color: #c9c3b4;
-    font-size: 17px;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 20px;
+    gap: 25px;
 }
 
 .btn {
-    padding: 12px 26px;
-    border-radius: 40px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    display: inline-block;
-    transition: 0.3s ease;
-}
-
-.primary-btn {
-    background: #d9ba7a;
+    background: #e5c88b;
     color: #000;
-    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 50px;
 }
 
-.primary-btn:hover {
-    background: #bfa067;
+.btn-outline {
+    border: 2px solid #e5c88b;
+    padding: 10px 22px;
+    border-radius: 50px;
+    color: #e5c88b;
 }
 
-.outline-btn {
-    border: 2px solid #d9ba7a;
-    color: #d9ba7a;
-}
-
-.outline-btn:hover {
-    background: #d9ba7a;
-    color: #000;
-}
-
-.hero-contact {
-    margin-top: 20px;
-    color: #e8d6ac;
-    font-size: 15px;
-}
-
-
-/* ----------------------------------------------------
-   SECTION TITLES
----------------------------------------------------- */
-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    margin-bottom: 10px;
+.hero {
     text-align: center;
+    padding: 120px 25px;
 }
 
-.subtitle {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #c9c3b4;
+.hero h1 {
+    font-size: 52px;
 }
 
-/* ----------------------------------------------------
-   WELCOME SECTION
----------------------------------------------------- */
-.two-column {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: 1fr 1fr;
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #ccc;
 }
 
-.welcome-section {
-    padding: 100px 0;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 0;
 }
 
-.column p {
-    margin-bottom: 14px;
+.card-box {
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.card-grid {
+    display: flex;
+    gap: 20px;
 }
 
 .card {
-    background: #111;
-    padding: 28px;
-    border-radius: 14px;
-}
-
-.card h3 {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 12px;
-}
-
-.card ul {
-    list-style: none;
-    line-height: 1.8;
-}
-
-.card ul li::before {
-    content: "• ";
-    color: #d9ba7a;
-}
-
-
-/* ----------------------------------------------------
-   PREVIOUS EVENTS
----------------------------------------------------- */
-#events {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-
-/* ----------------------------------------------------
-   RENTALS SECTION
----------------------------------------------------- */
-.rentals-section {
-    padding: 100px 20px;
-}
-
-.rental-banner {
-    background: #1a1a1a;
-    color: #e8d6ac;
-    padding: 12px 20px;
-    margin: 30px auto;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 850px;
-}
-
-.rental-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.rental-card {
-    background: #111;
-    padding: 30px;
-    border-radius: 12px;
-}
-
-.rental-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.rental-title {
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-.price {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-
-/* ----------------------------------------------------
-   PLAN SECTION
----------------------------------------------------- */
-.plan-section {
-    padding: 100px 20px;
-}
-
-.plan-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.plan-step {
+    flex: 1;
     background: #111;
     padding: 25px;
-    border-radius: 14px;
-    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #333;
 }
 
-.step-number {
-    background: #d9ba7a;
-    color: #000;
-    display: inline-block;
-    padding: 6px 14px;
-    border-radius: 50px;
-    margin-bottom: 14px;
-    font-weight: 700;
+.steps {
+    display: flex;
+    gap: 20px;
 }
 
-
-/* ----------------------------------------------------
-   FAQ SECTION
----------------------------------------------------- */
-.faq-section {
-    padding: 100px 20px;
-}
-
-.faq-list {
-    max-width: 800px;
-    margin: 0 auto;
+.step {
+    flex: 1;
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #333;
 }
 
 .faq-item {
-    margin-bottom: 12px;
-}
-
-.faq-question {
-    width: 100%;
-    text-align: left;
-    padding: 16px;
-    font-size: 16px;
     background: #111;
-    color: #e8d6ac;
-    border: none;
-    border-radius: 10px;
+    padding: 18px 24px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    margin-bottom: 12px;
     cursor: pointer;
 }
 
-.faq-answer {
+.faq-content {
+    margin-top: 10px;
     display: none;
-    background: #0d0d0d;
-    padding: 14px 18px;
-    border-radius: 0 0 10px 10px;
-    margin-top: -8px;
+    color: #bbb;
 }
 
-
-/* ----------------------------------------------------
-   HOW IT STARTED
----------------------------------------------------- */
-.how-section {
-    padding: 100px 20px;
-}
-
-
-/* ----------------------------------------------------
-   CONTACT SECTION
----------------------------------------------------- */
-.contact-section {
-    padding: 100px 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
+input, textarea {
     width: 100%;
     padding: 14px;
-    background: #111;
+    background: #1a1a1a;
     border: 1px solid #333;
-    color: #e8d6ac;
     border-radius: 8px;
-    margin-bottom: 14px;
+    color: #fff;
+    margin-bottom: 18px;
 }
 
-.contact-form textarea {
-    height: 120px;
-    resize: none;
-}
-
-
-/* ----------------------------------------------------
-   FOOTER
----------------------------------------------------- */
-.footer {
-    padding: 40px;
+footer {
     text-align: center;
+    padding: 20px;
+    color: #777;
     background: #000;
-    color: #c9c3b4;
-}
-
-
-/* ----------------------------------------------------
-   MOBILE RESPONSIVE
----------------------------------------------------- */
-@media (max-width: 900px) {
-
-    .nav-toggle {
-        display: flex;
-    }
-
-    .main-nav {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #000;
-        width: 100%;
-        display: none;
-        padding: 20px 0;
-        border-top: 1px solid #222;
-    }
-
-    .main-nav.active {
-        display: block;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .two-column,
-    .plan-grid,
-    .rental-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-title {
-        font-size: 42px;
-    }
+    border-top: 1px solid #222;
 }

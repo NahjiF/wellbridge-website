@@ -3,268 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WellBridge Social</title>
+    <title>WellBridge Social • Event Venue</title>
 
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <!-- MAIN CSS (root folder) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ========================================================= -->
-<!-- HEADER / NAVIGATION -->
-<!-- ========================================================= -->
-<header class="header">
-    <div class="header-inner">
+    <nav>
+        <img src="logo.png" class="logo" alt="WellBridge Social Logo">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#events">PREVIOUS EVENTS</a></li>
+            <li><a href="#rentals">RENTALS</a></li>
+            <li><a href="#plan">PLAN YOUR EVENT</a></li>
+            <li><a href="#faq">FAQ'S</a></li>
+            <li><a href="#story">HOW IT STARTED</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+    </nav>
 
-        <!-- LOGO -->
-        <img src="images/logo.png" alt="WellBridge Social" class="logo">
+    <section class="hero" id="home">
+        <h1>Beautiful, flexible space for your next event.</h1>
+        <p>Host showers, birthday parties, meetings, repasts, and more at WellBridge Social. Two rooms, simple pricing, and a welcoming atmosphere.</p>
+        <div class="hero-buttons">
+            <a class="btn" href="#rentals">View Rental Options</a>
+            <a class="btn-outline" href="#contact">Check Date Availability</a>
+        </div>
+    </section>
 
-        <!-- NAVIGATION -->
-        <nav class="nav">
-            <button class="nav-toggle" id="navToggle">
-                <span></span><span></span><span></span>
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#events">PREVIOUS EVENTS</a></li>
-                <li><a href="#rentals">RENTALS</a></li>
-                <li><a href="#plan">PLAN YOUR EVENT</a></li>
-                <li><a href="#faqs">FAQ’S</a></li>
-                <li><a href="#how">HOW IT STARTED</a></li>
-                <li><a href="#contact">CONTACT US</a></li>
-            </ul>
-        </nav>
-
-    </div>
-</header>
-
-
-<!-- ========================================================= -->
-<!-- HERO SECTION -->
-<!-- ========================================================= -->
-<section id="hero" class="hero">
-
-    <p class="hero-location">BIRMINGHAM, AL • FORESTDALE</p>
-
-    <h1 class="hero-title">
-        Beautiful, flexible <br>
-        space for your next <br>
-        event.
-    </h1>
-
-    <p class="hero-sub">
-        Host showers, birthday parties, meetings, repasts, and more at WellBridge Social.
-        Two rooms, simple pricing, and a welcoming atmosphere.
-    </p>
-
-    <div class="hero-buttons">
-        <a href="#rentals" class="btn gold">View Rental Options</a>
-        <a href="#contact" class="btn outline">Check Date Availability</a>
-    </div>
-
-    <p class="hero-phone">Call or text <strong>205-504-6812</strong> to get started.</p>
-
-</section>
-
-
-<!-- ========================================================= -->
-<!-- WELCOME SECTION -->
-<!-- ========================================================= -->
-<section class="welcome">
-
-    <div class="welcome-left">
+    <section class="container" id="about">
         <h2>Welcome to WellBridge Social</h2>
+        <p>WellBridge Social is a locally owned event and conference venue in Birmingham, AL. Our mission is to make hosting your event simple and stress-free.</p>
 
-        <p>
-            WellBridge Social is a locally owned event and conference venue in Birmingham, AL,
-            operated by <strong>Lynn Wilkerson</strong>. Our goal is to make hosting your event simple,
-            affordable, and stress-free.
-        </p>
+        <div class="card-box">
+            <ul>
+                <li>Located at 1633 Forestdale Blvd, Birmingham, AL</li>
+                <li>Large room up to 100 guests</li>
+                <li>Small room up to 50 guests</li>
+                <li>Tables & chairs included</li>
+                <li>Optional linen rentals available</li>
+            </ul>
+        </div>
+    </section>
 
-        <p>
-            With two flexible spaces, included tables and chairs, and optional linen rentals,
-            you can style the room to match your theme. Bring your own planner, caterer, DJ, and décor —
-            or keep it simple and intimate.
-        </p>
-    </div>
+    <section class="container" id="rentals">
+        <h2>2026 Rental Information</h2>
 
-    <div class="welcome-card">
-        <h3>Venue Details</h3>
-        <ul>
-            <li>Large Room: up to 100 guests</li>
-            <li>Small Room: up to 50 guests</li>
-            <li>Tables & chairs included</li>
-            <li>Optional linen rentals</li>
-        </ul>
-        <p><strong>Address:</strong> 1633 Forestdale Blvd, Birmingham, AL</p>
-    </div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Large Room</h3>
+                <p>Day Events: $700</p>
+                <p>Evening Events: $900</p>
+            </div>
 
-</section>
+            <div class="card">
+                <h3>Small Room</h3>
+                <p>Day Events: $600</p>
+                <p>Evening Events: $700</p>
+            </div>
+        </div>
+    </section>
 
+    <section class="container" id="plan">
+        <h2>Plan Your Event</h2>
 
-<!-- ========================================================= -->
-<!-- PREVIOUS EVENTS -->
-<!-- ========================================================= -->
-<section id="events" class="events">
-    <h2>Previous Events</h2>
-    <p>Gallery coming soon.</p>
-</section>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Check Your Date</h3>
+                <p>Send your preferred date, time frame, and guest count.</p>
+            </div>
 
+            <div class="step">
+                <h3>2. Reserve Your Room</h3>
+                <p>Secure your date with a 50% deposit and signed agreement.</p>
+            </div>
 
-<!-- ========================================================= -->
-<!-- RENTAL INFORMATION -->
-<!-- ========================================================= -->
-<section id="rentals" class="rentals">
+            <div class="step">
+                <h3>3. Bring Your Vision</h3>
+                <p>Decorate and host your event the way you imagined.</p>
+            </div>
+        </div>
+    </section>
 
-    <h2>2026 Rental Information</h2>
+    <section class="container" id="faq">
+        <h2>FAQ's</h2>
 
-    <p class="rental-desc">
-        Pricing is based on room size, event type, day of the week, length of rental,
-        number of guests, linen rental, and whether alcohol is served.
-    </p>
-
-    <div class="rental-note">
-        All rentals include up to <strong>8 hours</strong>.  
-        Extra time is <strong>$100/hr</strong>.  
-        Setup & cleanup must fit within the rental window.
-    </div>
-
-    <div class="rental-grid">
-
-        <div class="rental-card">
-            <h3>Large Room</h3>
-            <p>Up to 100 guests</p>
-
-            <h4>Day Events (9AM – 5PM)</h4>
-            <p class="price">$700</p>
-
-            <h4>Evening Events (8 hours)</h4>
-            <p class="price">$900</p>
+        <div class="faq-item">
+            <p>Can I bring my own food and cake?</p>
+            <div class="faq-content">Yes! You can bring any food, desserts, or drinks.</div>
         </div>
 
-        <div class="rental-card">
-            <h3>Small Room</h3>
-            <p>Up to 50 guests</p>
-
-            <h4>Day Events (9AM – 5PM)</h4>
-            <p class="price">$600</p>
-
-            <h4>Evening Events (8 hours)</h4>
-            <p class="price">$700</p>
+        <div class="faq-item">
+            <p>Can I bring a DJ or loud music?</p>
+            <div class="faq-content">Yes, DJs and amplified music are allowed.</div>
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- ========================================================= -->
-<!-- PLAN YOUR EVENT -->
-<!-- ========================================================= -->
-<section id="plan" class="plan">
-    <h2>Plan Your Event</h2>
-
-    <div class="plan-grid">
-        <div class="plan-step">
-            <h3>1. Check Your Date</h3>
-            <p>Send your preferred date, timeframe, and guest count.</p>
+        <div class="faq-item">
+            <p>Do you offer tours?</p>
+            <div class="faq-content">Yes, tours are available by appointment.</div>
         </div>
+    </section>
 
-        <div class="plan-step">
-            <h3>2. Reserve Your Room</h3>
-            <p>Secure your date with a deposit + signed agreement.</p>
+    <section class="container" id="story">
+        <h2>How It Started</h2>
+        <p>WellBridge Social was created by Lynn Wilkerson as a warm, flexible gathering space for families and organizations in Birmingham.</p>
+    </section>
+
+    <section class="container" id="contact">
+        <h2>Contact Us</h2>
+
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Phone">
+            <textarea placeholder="Event details..."></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div class="venue-info">
+            <p><strong>WellBridge Social</strong><br>1633 Forestdale Blvd<br>Birmingham, AL<br>Phone: 205-504-6812</p>
         </div>
+    </section>
 
-        <div class="plan-step">
-            <h3>3. Bring Your Vision</h3>
-            <p>Decorate and host your event your way.</p>
-        </div>
-    </div>
+    <footer>© 2025 WellBridge Social. All rights reserved.</footer>
 
-</section>
-
-
-<!-- ========================================================= -->
-<!-- FAQ -->
-<!-- ========================================================= -->
-<section id="faqs" class="faqs">
-    <h2>FAQ’s</h2>
-
-    <details>
-        <summary>Can I bring my own food?</summary>
-        <p>Yes, outside food is welcome.</p>
-    </details>
-
-    <details>
-        <summary>Can I bring a DJ?</summary>
-        <p>Yes, DJs and speakers are allowed.</p>
-    </details>
-
-    <details>
-        <summary>Do you offer tours?</summary>
-        <p>Yes — call to schedule.</p>
-    </details>
-
-    <details>
-        <summary>Do you provide décor?</summary>
-        <p>Linen rentals available.</p>
-    </details>
-</section>
-
-
-<!-- ========================================================= -->
-<!-- HOW IT STARTED -->
-<!-- ========================================================= -->
-<section id="how" class="how">
-    <h2>How It Started</h2>
-
-    <p>
-        WellBridge Social was created as a warm, flexible gathering space
-        for families and organizations in Birmingham.
-    </p>
-
-    <div class="how-card">
-        <h3>Our Commitment</h3>
-        <ul>
-            <li>Clear and honest pricing</li>
-            <li>Clean, ready-to-use space</li>
-            <li>Friendly communication</li>
-            <li>A venue that feels like “yours”</li>
-        </ul>
-    </div>
-</section>
-
-
-<!-- ========================================================= -->
-<!-- CONTACT -->
-<!-- ========================================================= -->
-<section id="contact" class="contact">
-
-    <h2>Contact Us</h2>
-
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Event Details"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-
-    <p>1633 Forestdale Blvd, Birmingham, AL</p>
-    <p>Call or text <strong>205-504-6812</strong></p>
-
-</section>
-
-
-<footer class="footer">
-    <p>© 2025 WellBridge Social. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
