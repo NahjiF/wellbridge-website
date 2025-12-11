@@ -1,6 +1,6 @@
-/* ===========================
-   GLOBAL STYLES
-=========================== */
+/* ===========================================================
+   GLOBAL
+=========================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -11,29 +11,128 @@ body {
     background: #000;
     color: #e6dcc6;
     font-family: "DM Sans", sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Headings */
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: "Playfair Display", serif;
-    color: #f3e8d0;
+    color: #f2e8d5;
 }
 
-/* Links */
-a {
-    color: inherit;
-    text-decoration: none;
+/* ===========================================================
+   HEADER + NAV
+=========================================================== */
+.header {
+    width: 100%;
+    background: #000;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-/* Reusable Buttons */
-.btn {
-    display: inline-block;
-    padding: 14px 26px;
-    border-radius: 30px;
+.header-inner {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+/* NAVBAR */
+.nav {
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #e6dcc6;
+    font-weight: 500;
     font-size: 15px;
-    letter-spacing: 0.5px;
-    transition: 0.2s ease;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d8b271;
+}
+
+/* Mobile Hamburger */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 28px;
+    height: 3px;
+    background: #d8b271;
+    border-radius: 4px;
+}
+
+/* ===========================================================
+   HERO
+=========================================================== */
+.hero {
+    text-align: center;
+    padding: 120px 20px 110px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-location {
+    color: #bfb39f;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.hero-title {
+    font-size: 54px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-sub {
+    max-width: 650px;
+    margin: auto;
+    color: #cfc5b3;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
 }
 
 .btn.gold {
@@ -55,201 +154,161 @@ a {
     color: #000;
 }
 
-/* ===========================
-   HEADER + NAVBAR
-=========================== */
-.header {
-    width: 100%;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    background: #000;
-    z-index: 999;
-}
-
-.nav-container {
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-img {
-    width: 130px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
-
-.nav {
-    position: relative;
-}
-
-.nav-links {
-    display: flex;
-    gap: 35px;
-    list-style: none;
-}
-
-.nav-links li a {
-    font-size: 14px;
-    font-weight: 500;
-    color: #e6dcc6;
-}
-
-.nav-links li a:hover {
-    color: #d8b271;
-}
-
-/* Mobile Toggle Button */
-.nav-toggle {
-    width: 35px;
-    height: 30px;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-.nav-toggle span {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #d8b271;
-    border-radius: 5px;
-}
-
-/* ===========================
-   HERO SECTION
-=========================== */
-.hero {
-    padding: 160px 20px 130px;
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
-}
-
-.hero-location {
-    font-size: 15px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-    color: #c1b8a5;
-}
-
-.hero-title {
-    font-size: 56px;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.hero-subtext {
-    font-size: 17px;
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 35px;
-    color: #cfc5b3;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 25px;
-}
-
 .hero-phone {
+    margin-top: 10px;
     font-size: 15px;
     color: #d8b271;
 }
 
-/* ===========================
-   WELCOME SECTION
-=========================== */
+/* ===========================================================
+   WELCOME
+=========================================================== */
 .welcome {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
     width: 90%;
     max-width: 1400px;
-    margin: 120px auto;
+    margin: 110px auto;
+    display: flex;
+    gap: 50px;
 }
 
 .welcome-left {
-    flex: 1.3;
+    flex: 1.4;
 }
 
 .welcome-left h2 {
     font-size: 32px;
-    margin-bottom: 18px;
+    margin-bottom: 18px.
 }
 
 .welcome-card {
     flex: 1;
-    background: #1a1a1a;
+    background: #111;
     padding: 25px;
     border-radius: 12px;
-    border: 1px solid #3a3a3a;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .welcome-card h3 {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* ===========================
-   RENTALS / EVENTS / PLAN / FAQ
-=========================== */
-section {
+.welcome-card ul {
+    list-style: disc;
+    margin-left: 22px;
+}
+
+.welcome-card p {
+    margin-top: 12px;
+    color: #cfc5b3;
+}
+
+/* ===========================================================
+   EVENTS
+=========================================================== */
+.events {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* ===========================================================
+   RENTALS
+=========================================================== */
+.rentals {
     width: 90%;
-    max-width: 1200px;
-    margin: 120px auto;
+    max-width: 1400px;
+    margin: 110px auto;
 }
 
-section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.rental-desc {
+    margin: 10px 0 20px;
+    color: #cfc5b3;
+}
+
+.rental-note {
+    background: #111;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border-left: 4px solid #d8b271;
+    margin-bottom: 35px;
 }
 
 .rental-grid {
     display: flex;
     gap: 30px;
-    margin-top: 40px;
     flex-wrap: wrap;
 }
 
 .rental-card {
-    background: #1a1a1a;
+    flex: 1;
+    min-width: 310px;
+    background: #111;
     padding: 25px;
     border-radius: 12px;
-    border: 1px solid #3a3a3a;
-    flex: 1;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
-.price-title {
-    margin-top: 12px;
-    font-weight: 700;
+.rental-card h3 {
+    margin-bottom: 5px;
+}
+
+.rental-card h4 {
+    margin-top: 15px;
     color: #d8b271;
 }
 
 .price {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    color: #d8b271;
+    margin-bottom: 8px;
 }
 
-/* FAQ */
+/* ===========================================================
+   PLAN YOUR EVENT
+=========================================================== */
+.plan {
+    width: 90%;
+    max-width: 1400px;
+    margin: 110px auto;
+    text-align: center;
+}
+
+.plan-grid {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.plan-step {
+    background: #111;
+    padding: 25px;
+    width: 280px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===========================================================
+   FAQ
+=========================================================== */
+.faqs {
+    width: 90%;
+    max-width: 900px;
+    margin: 110px auto;
+}
+
 details {
     background: #111;
-    padding: 12px 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border-left: 4px solid #d8b271;
     margin-bottom: 12px;
-    border-left: 3px solid #d8b271;
+    cursor: pointer;
 }
 
 summary {
-    cursor: pointer;
-    font-size: 17px;
+    font-weight: 600;
+    color: #e6dcc6;
 }
 
 details p {
@@ -257,27 +316,50 @@ details p {
     color: #cfc5b3;
 }
 
-/* ===========================
+/* ===========================================================
+   HOW IT STARTED
+=========================================================== */
+.how {
+    width: 90%;
+    max-width: 900px;
+    margin: 110px auto;
+    text-align: center;
+}
+
+.how-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-top: 18px;
+}
+
+.how-card ul {
+    list-style: square;
+    margin-left: 22px;
+}
+
+/* ===========================================================
    CONTACT
-=========================== */
-.contact-wrapper {
-    display: flex;
-    gap: 40px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+=========================================================== */
+.contact {
+    width: 90%;
+    max-width: 900px;
+    margin: 110px auto;
+    text-align: center;
 }
 
 .contact-form {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin: 25px auto;
+    max-width: 480px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: #111;
     border: 1px solid #333;
     border-radius: 6px;
@@ -285,75 +367,74 @@ details p {
 }
 
 .contact-form textarea {
-    height: 120px;
+    height: 110px;
 }
 
 .contact-form button {
-    padding: 14px;
     background: #d8b271;
+    color: #000;
+    padding: 14px;
     border: none;
     border-radius: 6px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .contact-form button:hover {
     background: #e8c78e;
 }
 
-.contact-card {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #3a3a3a;
-    flex: 0.8;
-}
-
-/* ===========================
+/* ===========================================================
    FOOTER
-=========================== */
+=========================================================== */
 .footer {
     text-align: center;
-    padding: 40px 0;
-    margin-top: 100px;
-    color: #666;
+    padding: 40px 0 60px;
+    color: #777;
     font-size: 14px;
 }
 
-/* ===========================
+/* ===========================================================
    MOBILE RESPONSIVE
-=========================== */
+=========================================================== */
 @media (max-width: 900px) {
+
+    /* NAV */
+    .nav-toggle {
+        display: flex;
+        margin-bottom: 12px;
+    }
+
     .nav-links {
         display: none;
-        position: absolute;
-        top: 45px;
-        right: 0;
-        background: #000;
         flex-direction: column;
-        width: 200px;
+        background: #000;
         padding: 20px;
         border-left: 2px solid #d8b271;
         border-bottom: 2px solid #d8b271;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 220px;
+        gap: 16px;
     }
 
     .nav-links.show {
         display: flex;
     }
 
-    .nav-toggle {
-        display: flex;
-    }
-
-    .welcome {
-        flex-direction: column;
-    }
-
+    /* HERO */
     .hero-title {
         font-size: 40px;
     }
 
+    /* WELCOME */
+    .welcome {
+        flex-direction: column;
+    }
+
+    /* RENTALS */
     .rental-grid {
         flex-direction: column;
     }
