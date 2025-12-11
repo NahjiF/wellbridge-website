@@ -1,3 +1,21 @@
 {
-  "questions": []
+  "type": "faq",
+  "items": [
+    {
+      "question": "Can I bring my own food and cake?",
+      "answer": "Yes, outside food is allowed."
+    },
+    {
+      "question": "Can I bring a DJ and loud music?",
+      "answer": "Yes. Events with over 50 guests and alcohol require a police officer on site."
+    },
+    {
+      "question": "Do you offer tours?",
+      "answer": "Yes. Call or text to schedule a tour."
+    },
+    {
+      "question": "Do you provide décor?",
+      "answer": "We provide tables, chairs, and optional linen rentals. Decorations are up to you."
+    }
+  ]
 }

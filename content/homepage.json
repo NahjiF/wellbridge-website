@@ -1,6 +1,10 @@
 {
-  "hero_title": "Beautiful, flexible space for your next event.",
-  "hero_subtitle": "Birmingham, AL • Forestdale",
-  "hero_description": "Host showers, meetings, repasts, and more at WellBridge Social.",
-  "hero_image": "/images/uploads/default-hero.jpg"
+  "type": "homepage",
+  "intro_title": "Beautiful, flexible space for your next event.",
+  "intro_subtitle": "BIRMINGHAM, AL • FORESTDALE",
+  "hero_description": "Host showers, birthday parties, meetings, repasts, and more at WellBridge Social. Two rooms, simple pricing, and a welcoming atmosphere.",
+  "button1_text": "View Rental Options",
+  "button1_link": "#rentals",
+  "button2_text": "Check Date Availability",
+  "button2_link": "#contact"
 }

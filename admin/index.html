@@ -1,13 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>WellBridge Social – Admin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WellBridge Social CMS</title>
 
-    <!-- Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@2/dist/netlify-cms.js"></script>
-</head>
-<body>
-</body>
+    <!-- Netlify Identity Widget (REQUIRED for login/signup) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <style>
+      /* OPTIONAL: makes white screen show loading text */
+      body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>Loading CMS…</div>
+
+    <!-- Netlify CMS App -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+    <script>
+      // REQUIRED: ensure identity loads and redirect happens correctly
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              // ALWAYS redirect to /admin/ after login
+              window.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>

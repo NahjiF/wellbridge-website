@@ -6,84 +6,87 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-
-  # -------------------------
-  # HOMEPAGE
-  # -------------------------
   - name: "homepage"
-    label: "Homepage"
-    file: "content/homepage.json"
-    fields:
-      - { label: "Hero Title", name: "hero_title", widget: "string" }
-      - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
-      - { label: "Hero Description", name: "hero_description", widget: "text" }
-      - { label: "Hero Background Image", name: "hero_image", widget: "image" }
+    label: "Homepage Content"
+    files:
+      - file: "content/homepage.json"
+        label: "Homepage"
+        name: "homepage"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero Button 1 Text", name: "button1_text", widget: "string" }
+          - { label: "Hero Button 1 Link", name: "button1_link", widget: "string" }
+          - { label: "Hero Button 2 Text", name: "button2_text", widget: "string" }
+          - { label: "Hero Button 2 Link", name: "button2_link", widget: "string" }
 
-  # -------------------------
-  # ABOUT
-  # -------------------------
   - name: "about"
     label: "About Section"
-    file: "content/about.json"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body Text", name: "body", widget: "text" }
-
-  # -------------------------
-  # VENUE DETAILS
-  # -------------------------
-  - name: "venue"
-    label: "Venue Details"
-    file: "content/venue.json"
-    fields:
-      - { label: "Large Room Capacity", name: "large_capacity", widget: "string" }
-      - { label: "Small Room Capacity", name: "small_capacity", widget: "string" }
-      - { label: "Included Items", name: "included_items", widget: "list" }
-      - label: "Room Pricing"
-        name: "room_pricing"
-        widget: "list"
-        fields:
-          - { label: "Room Name", name: "room", widget: "string" }
-          - { label: "Day Price", name: "day_price", widget: "string" }
-          - { label: "Evening Price", name: "evening_price", widget: "string" }
-
-  # -------------------------
-  # RENTALS
-  # -------------------------
-  - name: "rentals"
-    label: "Rentals"
-    file: "content/rentals.json"
-    fields:
-      - { label: "Description", name: "desc", widget: "text" }
-      - label: "Rental Options"
-        name: "options"
-        widget: "list"
+    files:
+      - file: "content/about.json"
+        label: "About Page"
+        name: "about"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Price", name: "price", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
 
-  # -------------------------
-  # FAQ
-  # -------------------------
-  - name: "faq"
-    label: "Frequently Asked Questions"
-    file: "content/faq.json"
-    fields:
-      - label: "Questions"
-        name: "questions"
-        widget: "list"
-        fields:
-          - { label: "Question", name: "question", widget: "string" }
-          - { label: "Answer", name: "answer", widget: "text" }
-
-  # -------------------------
-  # CONTACT
-  # -------------------------
   - name: "contact"
     label: "Contact Info"
-    file: "content/contact.json"
-    fields:
-      - { label: "Business Address", name: "address", widget: "string" }
-      - { label: "Phone Number", name: "phone", widget: "string" }
-      - { label: "Email", name: "email", widget: "string" }
-      - { label: "Additional Notes", name: "notes", widget: "text" }
+    files:
+      - file: "content/contact.json"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+
+  - name: "rentals"
+    label: "Rental Pricing"
+    files:
+      - file: "content/rentals.json"
+        label: "Rental Info"
+        name: "rentals"
+        fields:
+          - { label: "Large Room Price (Day)", name: "large_day", widget: "string" }
+          - { label: "Large Room Price (Evening)", name: "large_evening", widget: "string" }
+          - { label: "Small Room Price (Day)", name: "small_day", widget: "string" }
+          - { label: "Small Room Price (Evening)", name: "small_evening", widget: "string" }
+
+  - name: "faq"
+    label: "FAQ Section"
+    files:
+      - file: "content/faq.json"
+        label: "FAQs"
+        name: "faq"
+        fields:
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "content/site.json"
+        label: "General Settings"
+        name: "site"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string" }
+          - { label: "Footer Text", name: "footer_text", widget: "string" }
+
+  - name: "venue"
+    label: "Venue Details"
+    files:
+      - file: "content/venue.json"
+        label: "Venue Info"
+        name: "venue"
+        fields:
+          - { label: "Address", name: "address", widget: "string" }
+          - label: "Venue Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Item", name: "item", widget: "string" }

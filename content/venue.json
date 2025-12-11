@@ -1,6 +1,11 @@
 {
-  "large_capacity": "100 Guests",
-  "small_capacity": "50 Guests",
-  "included_items": [],
-  "room_pricing": []
+  "type": "venue",
+  "location_text": "Located at 1633 Forestdale Blvd in Birmingham, AL.",
+  "features": [
+    "Large room for up to 100 guests",
+    "Small room for up to 50 guests",
+    "Tables & chairs included with all rentals",
+    "Optional linen and specialty cloth rentals",
+    "Flexible setup and cleanup times"
+  ]
 }

@@ -1,88 +1,16 @@
 {
-  "heroEyebrow": "Birmingham, AL • Forestdale",
-  "heroHeading": "Beautiful, flexible space for your next event.",
-  "heroBody": "Host showers, birthday parties, meetings, repasts, and more at WellBridge Social. Two rooms, simple pricing, and a welcoming atmosphere.",
-  "heroPrimaryCtaLabel": "View Rental Options",
-  "heroPrimaryCtaHref": "#rentals",
-  "heroSecondaryCtaLabel": "Check Date Availability",
-  "heroSecondaryCtaHref": "#contact",
-  "heroCallout": "Call or text 205-504-6812 to get started.",
+  "type": "site",
+  "site_title": "WellBridge Social",
+  "tagline": "Event & Conference Venue",
+  "logo": "/images/logo.png",
 
-  "welcomeTitle": "Welcome to WellBridge Social",
-  "welcomeParagraph1": "WellBridge Social is a locally owned event and conference venue in Birmingham, AL, operated by Lynn Wilkerson. Our goal is to make hosting your event simple, affordable, and stress-free.",
-  "welcomeParagraph2": "With two flexible spaces, included tables and chairs, and optional linen rentals, you can style the room to match your colors and theme. Bring your own planner, caterer, DJ, and décor—or keep it simple and intimate.",
-
-  "venueDetailsTitle": "Venue Details",
-  "venueDetail1": "Located at 1633 Forestdale Blvd, Birmingham, AL",
-  "venueDetail2": "Large room for up to 100 guests",
-  "venueDetail3": "Small room for up to 50 guests",
-  "venueDetail4": "Tables & chairs included with all rentals",
-  "venueDetail5": "Optional linen and specialty cloths available",
-
-  "eventsTitle": "Previous Events",
-  "eventsBody": "Gallery coming soon as we add photos from upcoming events.",
-
-  "rentalsTitle": "2026 Rental Information",
-  "rentalsIntro": "Clear pricing for both the large and small rooms. Pricing is based on room size, event type, day of the week, time needed, number of guests, linen rental, and whether alcohol will be served.",
-  "rentalsBanner": "All rentals are for up to 8 hours. Additional time is $100 per hour. Events must end on time; setup and cleanup are included in your 8-hour window.",
-
-  "largeRoomTitle": "Large Room",
-  "largeRoomGuests": "Up to 100 guests",
-  "largeRoomDayPrice": "$700",
-  "largeRoomEveningPrice": "$900",
-
-  "smallRoomTitle": "Small Room",
-  "smallRoomGuests": "Up to 50 guests",
-  "smallRoomDayPrice": "$600",
-  "smallRoomEveningPrice": "$700",
-
-  "cleanUpTitle": "Clean Up Deposit",
-  "cleanUpBody": "A refundable $100 clean up deposit is required before your event. It will be returned if the venue is left clean and in good condition.",
-
-  "tablesTitle": "Tables, Chairs & Linen",
-  "tablesBody": "Tables and chairs are included with all rentals. Linen and specialty cloths are available for an additional fee.",
-
-  "alcoholTitle": "Alcohol & Security",
-  "alcoholBody": "If you have more than 50 guests and serve alcohol (BYOB or open bar), the City of Adamsville requires a police officer on site. To arrange and pay for an officer, please contact the City of Adamsville at 205-674-5671.",
-
-  "planTitle": "Plan Your Event",
-  "planIntro": "We keep the process simple so you can focus on celebrating.",
-  "step1Title": "Check Your Date",
-  "step1Body": "Send your preferred date, time frame, and guest count.",
-  "step2Title": "Reserve Your Room",
-  "step2Body": "Secure your date with a 50% deposit and a signed agreement.",
-  "step3Title": "Bring Your Vision",
-  "step3Body": "Decorate and host your event the way you imagined it.",
-
-  "faqsTitle": "FAQ's",
-  "faqsIntro": "Answers to a few common questions about renting the venue.",
-  "faq1Question": "Can I bring my own food and cake?",
-  "faq1Answer": "Yes. You’re welcome to bring your own food, cake, and non-alcoholic drinks, or use the caterer of your choice.",
-  "faq2Question": "Can I bring a DJ and loud music?",
-  "faq2Answer": "Yes, DJs are allowed. We just ask that music volume remains respectful of our neighbors.",
-  "faq3Question": "Do you offer tours?",
-  "faq3Answer": "Absolutely. Contact us to schedule a tour and see the space in person.",
-  "faq4Question": "Do you provide décor?",
-  "faq4Answer": "We do not provide full décor services, but we can recommend decorators and planners who know the space well.",
-
-  "howTitle": "How It Started",
-  "howParagraph1": "WellBridge Social was created by Lynn Wilkerson as a warm, flexible gathering space for families and organizations in Birmingham.",
-  "howParagraph2": "From baby showers to repasts, Lynn’s goal is for every guest to feel welcome and every event to feel cared for.",
-
-  "commitmentTitle": "Our Commitment",
-  "commitment1": "Clear, honest pricing",
-  "commitment2": "Clean, ready-to-use space",
-  "commitment3": "Friendly and responsive communication",
-  "commitment4": "A venue that feels like “yours” for the day",
-
-  "contactTitle": "Contact Us",
-  "contactIntro": "Ready to check a date or ask a question? Reach out below.",
-  "contactInfoTitle": "Venue Information",
-  "contactVenueName": "WellBridge Social",
-  "contactAddress": "1633 Forestdale Blvd, Birmingham, AL",
-  "contactPhone": "Phone: 205-504-6812",
-  "contactNote": "Please include your date and estimated guest count for a quicker response.",
-  "contactCallOrText": "Prefer to call or text directly? Call or text 205-504-6812.",
-
-  "footerText": "© 2025 WellBridge Social. All rights reserved."
+  "menu": [
+    { "label": "Home", "url": "#home" },
+    { "label": "Previous Events", "url": "#events" },
+    { "label": "Rentals", "url": "#rentals" },
+    { "label": "Plan Your Event", "url": "#plan" },
+    { "label": "FAQ's", "url": "#faq" },
+    { "label": "How It Started", "url": "#how" },
+    { "label": "Contact Us", "url": "#contact" }
+  ]
 }

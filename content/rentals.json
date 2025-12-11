@@ -1,4 +1,10 @@
 {
-  "desc": "Our rental packages are simple, affordable, and flexible.",
-  "options": []
+  "type": "rentals",
+  "large_title": "Large Room",
+  "large_body": "Up to 100 guests.\n\n**Day events (9 AM – 5 PM)**: $700\n**Evening events (8 hours)**: $900\nTimes available: 4 PM–12 AM, 5 PM–1 AM, 6 PM–2 AM.",
+  
+  "small_title": "Small Room",
+  "small_body": "Up to 50 guests.\n\n**Day events (9 AM – 5 PM)**: $600\n**Evening events (8 hours)**: $700",
+
+  "deposit_text": "**Clean Up Deposit**\nA refundable $100 clean-up deposit is required before your event and will be returned if floors and tables are clean, trash is bagged, and décor is removed."
 }
