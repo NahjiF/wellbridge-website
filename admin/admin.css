@@ -1,0 +1,30 @@
+/* Make the CMS layout tighter and not centered huge */
+.nc-app-header {
+  padding: 10px 20px !important;
+}
+
+/* Reduce the giant white/gray area spacing */
+.nc-main {
+  margin-top: 10px !important;
+  padding-top: 0 !important;
+}
+
+/* Fix left sidebar width */
+.css-1p5q5e5 {
+  max-width: 240px !important;
+}
+
+/* Form fields styling */
+.css-1m7h6nq, 
+.css-14gy7wr, 
+.css-1qg7r45 {
+  padding: 8px 12px !important;
+  font-size: 15px !important;
+}
+
+/* Remove weird middle spacing bar */
+.nc-entryEditor-toolbar {
+  border: none !important;
+  margin-bottom: 5px !important;
+  padding-bottom: 0 !important;
+}
