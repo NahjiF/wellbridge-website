@@ -5,22 +5,99 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
+site_url: "https://wellbridge.social"
+logo_url: "/images/logo-sign.jpg"
+
 collections:
-  # Gallery / Previous Events – your mom edits these
-  - name: "gallery"
-    label: "Gallery / Previous Events"
-    files:
-      - file: "content/gallery/index.json"
-        label: "Gallery Items"
-        name: "gallery_items"
-        format: json
-        fields:
-          - label: "Items"
-            name: "items"
-            widget: list
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+  - name: "site"
+    label: "Site Content"
+    delete: false
+    file: "content/site.json"
+    format: "json"
+    fields:
+      - { label: "Hero Eyebrow", name: "heroEyebrow", widget: "string" }
+      - { label: "Hero Heading", name: "heroHeading", widget: "string" }
+      - { label: "Hero Body", name: "heroBody", widget: "text" }
+      - { label: "Primary Button Label", name: "heroPrimaryCtaLabel", widget: "string" }
+      - { label: "Primary Button Link", name: "heroPrimaryCtaHref", widget: "string" }
+      - { label: "Secondary Button Label", name: "heroSecondaryCtaLabel", widget: "string" }
+      - { label: "Secondary Button Link", name: "heroSecondaryCtaHref", widget: "string" }
+      - { label: "Hero Callout", name: "heroCallout", widget: "string" }
+
+      - { label: "Welcome Title", name: "welcomeTitle", widget: "string" }
+      - { label: "Welcome Paragraph 1", name: "welcomeParagraph1", widget: "text" }
+      - { label: "Welcome Paragraph 2", name: "welcomeParagraph2", widget: "text" }
+
+      - { label: "Venue Details Title", name: "venueDetailsTitle", widget: "string" }
+      - { label: "Detail 1", name: "venueDetail1", widget: "string" }
+      - { label: "Detail 2", name: "venueDetail2", widget: "string" }
+      - { label: "Detail 3", name: "venueDetail3", widget: "string" }
+      - { label: "Detail 4", name: "venueDetail4", widget: "string" }
+      - { label: "Detail 5", name: "venueDetail5", widget: "string" }
+
+      - { label: "Events Title", name: "eventsTitle", widget: "string" }
+      - { label: "Events Body", name: "eventsBody", widget: "text" }
+
+      - { label: "Rentals Title", name: "rentalsTitle", widget: "string" }
+      - { label: "Rentals Intro", name: "rentalsIntro", widget: "text" }
+      - { label: "Rentals Banner", name: "rentalsBanner", widget: "text" }
+
+      - { label: "Large Room Title", name: "largeRoomTitle", widget: "string" }
+      - { label: "Large Room Guests", name: "largeRoomGuests", widget: "string" }
+      - { label: "Large Room Day Price", name: "largeRoomDayPrice", widget: "string" }
+      - { label: "Large Room Evening Price", name: "largeRoomEveningPrice", widget: "string" }
+
+      - { label: "Small Room Title", name: "smallRoomTitle", widget: "string" }
+      - { label: "Small Room Guests", name: "smallRoomGuests", widget: "string" }
+      - { label: "Small Room Day Price", name: "smallRoomDayPrice", widget: "string" }
+      - { label: "Small Room Evening Price", name: "smallRoomEveningPrice", widget: "string" }
+
+      - { label: "Clean Up Title", name: "cleanUpTitle", widget: "string" }
+      - { label: "Clean Up Body", name: "cleanUpBody", widget: "text" }
+
+      - { label: "Tables Title", name: "tablesTitle", widget: "string" }
+      - { label: "Tables Body", name: "tablesBody", widget: "text" }
+
+      - { label: "Alcohol Title", name: "alcoholTitle", widget: "string" }
+      - { label: "Alcohol Body", name: "alcoholBody", widget: "text" }
+
+      - { label: "Plan Title", name: "planTitle", widget: "string" }
+      - { label: "Plan Intro", name: "planIntro", widget: "text" }
+      - { label: "Step 1 Title", name: "step1Title", widget: "string" }
+      - { label: "Step 1 Body", name: "step1Body", widget: "text" }
+      - { label: "Step 2 Title", name: "step2Title", widget: "string" }
+      - { label: "Step 2 Body", name: "step2Body", widget: "text" }
+      - { label: "Step 3 Title", name: "step3Title", widget: "string" }
+      - { label: "Step 3 Body", name: "step3Body", widget: "text" }
+
+      - { label: "FAQs Title", name: "faqsTitle", widget: "string" }
+      - { label: "FAQs Intro", name: "faqsIntro", widget: "text" }
+      - { label: "FAQ 1 Question", name: "faq1Question", widget: "string" }
+      - { label: "FAQ 1 Answer", name: "faq1Answer", widget: "text" }
+      - { label: "FAQ 2 Question", name: "faq2Question", widget: "string" }
+      - { label: "FAQ 2 Answer", name: "faq2Answer", widget: "text" }
+      - { label: "FAQ 3 Question", name: "faq3Question", widget: "string" }
+      - { label: "FAQ 3 Answer", name: "faq3Answer", widget: "text" }
+      - { label: "FAQ 4 Question", name: "faq4Question", widget: "string" }
+      - { label: "FAQ 4 Answer", name: "faq4Answer", widget: "text" }
+
+      - { label: "How It Started Title", name: "howTitle", widget: "string" }
+      - { label: "How Paragraph 1", name: "howParagraph1", widget: "text" }
+      - { label: "How Paragraph 2", name: "howParagraph2", widget: "text" }
+
+      - { label: "Commitment Title", name: "commitmentTitle", widget: "string" }
+      - { label: "Commitment 1", name: "commitment1", widget: "string" }
+      - { label: "Commitment 2", name: "commitment2", widget: "string" }
+      - { label: "Commitment 3", name: "commitment3", widget: "string" }
+      - { label: "Commitment 4", name: "commitment4", widget: "string" }
+
+      - { label: "Contact Title", name: "contactTitle", widget: "string" }
+      - { label: "Contact Intro", name: "contactIntro", widget: "text" }
+      - { label: "Contact Info Title", name: "contactInfoTitle", widget: "string" }
+      - { label: "Contact Venue Name", name: "contactVenueName", widget: "string" }
+      - { label: "Contact Address", name: "contactAddress", widget: "string" }
+      - { label: "Contact Phone", name: "contactPhone", widget: "string" }
+      - { label: "Contact Note", name: "contactNote", widget: "text" }
+      - { label: "Contact Call/Text Line", name: "contactCallOrText", widget: "text" }
+
+      - { label: "Footer Text", name: "footerText", widget: "string" }
